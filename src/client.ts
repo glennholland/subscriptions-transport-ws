@@ -468,7 +468,7 @@ export class SubscriptionClient {
     }];
   }
 
-  private sendMessage(id: string, type: string, payload: any) {
+  protected sendMessage(id: string, type: string, payload: any) {
     this.sendMessageRaw(this.buildMessage(id, type, payload));
   }
 
@@ -594,7 +594,7 @@ export class SubscriptionClient {
     };
   }
 
-  private processReceivedData(receivedData: any) {
+  protected processReceivedData(receivedData: any) {
     let parsedMessage: any;
     let opId: string;
 
